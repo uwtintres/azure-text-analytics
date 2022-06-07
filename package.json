@@ -22,6 +22,10 @@
       "key-phrases": "key-phrases/key-phrases.js",
       "sentiment": "sentiment/sentiment.js"
     },
+    "homepage": "https://github.com/uwtintres/azure-text-analytics",
+    "bugs": {
+      "url": "https://github.com/uwtintres/azure-text-analytics/issues"
+    },
     "author": "Tsung Jui Wang",
     "license": "MIT",
     "dependencies": {
