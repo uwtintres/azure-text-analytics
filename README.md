@@ -1,5 +1,5 @@
 ## Introduction
-**azure-text-analytics** is a collection of nodes that translation services from [Microsoft Azure Translation Services](https://westus.dev.cognitive.microsoft.com/docs/services/TextAnalytics-v3-2-Preview-2/operations/Languages).
+**azure-text-analytics** is a collection of nodes for text analytics from [Microsoft Azure Text Analytics Services](https://westus.dev.cognitive.microsoft.com/docs/services/TextAnalytics-v3-2-Preview-2/operations/Languages).
 
 ### Features:
 These features are currently supported:
