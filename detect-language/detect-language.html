@@ -1,0 +1,79 @@
+<script type="text/javascript">
+    RED.nodes.registerType('detect-language',{
+        category: 'Azure Text Analytics',
+        color: '#008AD7',
+        defaults: {
+            name: { value: ''  },
+            showStats: { value: 'no', required: true },
+            loggingOptOut: { value: 'no', required: true },
+            modelVersion: { value: '' }
+        },
+        credentials: {
+            key: { type: 'password' },
+            region: { type: 'text' }
+        },
+        inputs: 1,
+        outputs: 1,
+        label: function() {
+            if (this.name) return this.name;
+            return 'detect-language';
+        },
+        icon: 'font-awesome/fa-exchange',
+    });
+</script>
+
+<script type="text/html" data-template-name="detect-language">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name </label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div id="node-input-div-showStats" class="form-row">
+        <label for="node-input-showStats"><i class="fa fa-tag"></i> Show stats </label>
+        <select name="node-input-showStats" id="node-input-showStats">
+            <option value="yes"> Yes </option>
+            <option value="no"> No </option>
+        </select>
+    </div>
+
+    <div id="node-input-div-loggingOptOut" class="form-row">
+        <label for="node-input-loggingOptOut"><i class="fa fa-tag"></i> Logging OptOut </label>
+        <select name="node-input-loggingOptOut" id="node-input-loggingOptOut">
+            <option value="yes"> Yes </option>
+            <option value="no"> No </option>
+        </select>
+    </div>
+
+    <div id="node-input-div-modelVersion" class="form-row">
+        <label for="node-input-modelVersion"><i class="fa fa-tag"></i> Model version </label>
+        <input type="text" id="node-input-modelVersion" placeholder="Optional parameter to specify the version of the AI model">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-key"><i class="fa fa-tag"></i> Key </label>
+        <input type="password" id="node-input-key" placeholder="Your beautiful key">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-region"><i class="fa fa-tag"></i> Region </label>
+        <input type="text" id="node-input-region" placeholder="Region">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="detect-language">
+    <p> image </p>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt> msg.payload
+            <span class="property-type"> Array </span>
+        </dt>
+        <dd>
+            An array of objects. There are three valid fields for the object: <code> id </code>, <code> text </code> and <code> countryHint </code>(optional).<br/>
+            For more information, please refer to <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/language-service/language-detection/how-to/call-api"> Official document </a>.
+        </dd>
+    </dl>
+
+    <p> showStats is an optional input to specify if the response should contain request and document level statistics. The default is false.</p>
+    <p> loggingOptOut is an optional input to specify if you opt-out of having your text input logged for troubleshooting. The default is false.</p>
+    <p> modelVersion is an optional input to specify the version of the AI model. The default value is "latest".</p>
+</script>
