@@ -1,6 +1,10 @@
 ## Introduction
 **azure-text-analytics** is a collection of nodes for text analytics from [Microsoft Azure Text Analytics Services](https://westus.dev.cognitive.microsoft.com/docs/services/TextAnalytics-v3-2-Preview-2/operations/Languages).
 
+### About us
+The [Internet of Things Research (INTRES) Group](https://github.com/UWTINTRES)
+at the University of Washington Tacoma (UWT) developed and maintains this package to promote Internet of Things (IoT) research and teaching. This package seeks to accelerate the adoption of IoT concepts by developing a simple mechanism to increase the productivity of researchers, software engineers, developers, and data scientists.
+
 ### Features:
 These features are currently supported:
 1. Language detection
@@ -24,3 +28,6 @@ The configuration of sentiment node is pretty simple, all parameters can be chos
 The output format is exactly from the official API document and is passed to the next node for further usage.
 
 ![Result](https://github.com/uwtintres/azure-text-analytics/blob/main/img/result.png?raw=true)
+
+#### Disclaimer
+INTRES and UWT are not responsible for the usage or utilization of these packages. They are meant to promote IoT research and education. IoT service providers may require additional verification steps to utilize the features outlined in these packages. We are not in any way responsible for the misuse of these packages. For more details on the service agreement and terms, please click [here](https://azure.microsoft.com/en-us/support/legal/).
